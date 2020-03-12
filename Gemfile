@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'cucumber-rails'
   gem 'pry'
   gem 'pry-stack_explorer', '~> 0.4.9.2'
 end
@@ -53,7 +54,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'rspec'
