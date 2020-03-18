@@ -9,7 +9,8 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'cucumber', '~> 2.4'
 gem 'devise', '~> 4.2'
 gem 'rubocop', require: false
-
+gem 'react_on_rails', '11.2.2'
+gem 'stripe'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
