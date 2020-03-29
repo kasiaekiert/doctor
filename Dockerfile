@@ -16,8 +16,10 @@ RUN apt-get install -y \
     netcat-traditional \
     emacs \
     vim \
-    mysql-client \
-    default-libmysqlclient-dev
+    libpq-dev
+
+    #mysql-client \
+    #default-libmysqlclient-dev
 
 # Install node from nodesource
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
