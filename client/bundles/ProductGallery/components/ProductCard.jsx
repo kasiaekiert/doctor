@@ -2,9 +2,11 @@ import React from "react";
 
 export class ProductCard extends React.Component {
   render() {
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+
     const amount = this.props.price.toLocaleString("en-US", {
       style: "currency",
-      currency: "USD"
+      currency: "USD",
     });
 
     return (
@@ -23,13 +25,31 @@ export class ProductCard extends React.Component {
             </p>
             <div className='d-flex justify-content-between align-items-center'>
               <div className='btn-group'>
-                <button
-                  type='button'
-                  className='btn btn-sm btn-outline-secondary'
-                >
-                  Add to Cart
-                </button>
+                <form method='POST' action='/shopping_cart/add'>
+                  <input
+                    type='hidden'
+                    name='authenticity_token'
+                    value={csrfToken}
+                  />
+                  <input
+                    type='hidden'
+                    name='shopping_cart_item[product_id]'
+                    value={this.props.id}
+                  />
+                  <input
+                    type='hidden'
+                    name='shopping_cart_item[quantity]'
+                    value='1'
+                  ></input>
+                  <button
+                    type='button'
+                    className='btn btn-sm btn-outline-secondary'
+                  >
+                    Add to Cart
+                  </button>
+                </form>
               </div>
+
               <div>{amount}</div>
             </div>
           </div>
