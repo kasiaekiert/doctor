@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :products
   post 'payments/success'
   get 'checkout/pay'
   get 'hello_world', to: 'hello_world#index'
