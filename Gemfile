@@ -5,11 +5,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'activeadmin'
 gem 'bootstrap', '~> 4.4.1'
-gem 'cucumber', '~> 2.4'
+gem 'cucumber', '~> 2.4', require: false
 gem 'devise', '~> 4.2'
+gem 'react_on_rails', '11.2.2'
 gem 'rubocop', require: false
+gem 'stripe'
 
+# Plus integrations with:
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
@@ -38,7 +45,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'cucumber-rails'
   gem 'pry'
   gem 'pry-stack_explorer', '~> 0.4.9.2'
 end
@@ -67,3 +73,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+gem 'mini_racer', platforms: :ruby

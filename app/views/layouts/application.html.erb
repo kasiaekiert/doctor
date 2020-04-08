@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <title>Doctor</title>
+    <title>Stripe on React on Rails - Doctor</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'product-gallery-bundle' %>
+
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <%= react_component("Navbar") %>
+      <%= react_component("SiteHeader") %>
     <div class='container'>
-      <%= yield %>
+      <main role="main">
+        <%= yield %>
+      </main>
     </div>
     <br><br><br>
     <%= render "layouts/footer" %>

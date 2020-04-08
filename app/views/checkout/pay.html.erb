@@ -1,0 +1,5 @@
+<h1>Checkout#pay</h1>
+<%= react_component("CheckoutPage", props: {
+clientSecret: @intent.client_secret,
+publishableKey: Rails.configuration.stripe[:publishable_key]
+}) %> 
