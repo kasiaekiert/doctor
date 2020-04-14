@@ -8,4 +8,8 @@ class CheckoutController < ApplicationController
                                              metadata: { your_own: 'data here' }
                                            })
   end
+
+  def index; end
+
+  def complete; end
 end

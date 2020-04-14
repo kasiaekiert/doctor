@@ -8,7 +8,9 @@ export class SiteHeader extends React.Component {
           <a href='/' className='navbar-brand d-flex align-items-center'>
             <strong>Web Store</strong>
           </a>
-          <span className='navbar-brand'>In Cart: 0</span>
+          <span className='navbar-brand'>
+            In Cart: {this.props.shopping_cart_item_count}
+          </span>
         </div>
       </header>
     );

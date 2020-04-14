@@ -13,8 +13,7 @@
 
   <body>
       <%= react_component("Navbar") %>
-      <%= react_component("SiteHeader") %>
-    <div class='container'>
+<%= react_component("SiteHeader", props: {shopping_cart_item_count: current_customer.shopping_cart_item_count}) %>    <div class='container'>
       <main role="main">
         <%= yield %>
       </main>

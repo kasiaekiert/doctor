@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :products
   post 'payments/success'
   get 'checkout/pay'
+  get 'checkout', to: 'checkout#index'
+  get 'checkout/complete'
+  post 'shopping_cart/add'
   get 'hello_world', to: 'hello_world#index'
   devise_for :authors
   get 'home/index'
