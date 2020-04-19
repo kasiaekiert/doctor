@@ -57,7 +57,9 @@ const StripeCheckoutForm = () => {
 };
 
 export const CheckoutForm = () => {
-  const stripePromise = loadStripe("<YOUR STRIPE PUBLISHABLE ID HERE>");
+  const stripePromise = loadStripe(
+    "pk_test_ojXwVSPXF1Th7j1Q4d90rXyy00zGS8Y2W0"
+  );
 
   return (
     <Elements stripe={stripePromise}>
