@@ -7,23 +7,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <h4 class="mb-3">Billing address</h4>
-
-      <form class="needs-validation" novalidate="">
-        <%= render partial: 'checkout/billing_info' %>
-
-        <hr class="mb-4">
-
-        <h4 class="mb-3">Payment</h4>
-
-        <%= render partial: 'checkout/payment_info' %>
-
-        <hr class="mb-4">
-
-        <button class="btn btn-primary btn-lg btn-block" type="submit">
-          Confirm and Pay
-        </button>
-      </form>
+      <%= react_component("CheckoutForm") %>
     </div>
 
     <div class="col-md-4 mb-4">
