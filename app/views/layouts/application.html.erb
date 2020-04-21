@@ -6,14 +6,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag 'web-store-bundle' %>
 
   </head>
 
   <body>
-      <%= react_component("Navbar") %>
-<%= react_component("SiteHeader", props: {shopping_cart_item_count: current_customer.shopping_cart_item_count}) %>    <div class='container'>
+    <%= react_component("SiteHeader", props: {shopping_cart_item_count: current_customer.shopping_cart_item_count}) %>    <div class='container'>
       <main role="main">
         <%= yield %>
       </main>
