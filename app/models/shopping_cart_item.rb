@@ -4,4 +4,8 @@ class ShoppingCartItem < ApplicationRecord
   belongs_to :shopping_cart
   belongs_to :product
   validates :quantity, presence: true
+
+  def price
+    product.price * quantity
+  end
 end

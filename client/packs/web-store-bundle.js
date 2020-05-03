@@ -5,6 +5,7 @@ import { ProductRow } from "../bundles/WebStore/components/ProductRow.jsx";
 import { SiteHeader } from "../bundles/WebStore/components/SiteHeader.jsx";
 import { ShoppingCartList } from "../bundles/WebStore/components/ShoppingCartList.jsx";
 import { CheckoutForm } from "../bundles/WebStore/components/CheckoutForm.jsx";
+import { MyCalendar } from "../bundles/Calendar/components/Calendar.jsx";
 
 ReactOnRails.register({
   SiteHeader,
@@ -12,4 +13,5 @@ ReactOnRails.register({
   ProductRow,
   ShoppingCartList,
   CheckoutForm,
+  MyCalendar,
 });

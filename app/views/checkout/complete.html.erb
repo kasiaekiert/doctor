@@ -1,0 +1,45 @@
+<section class="jumbotron text-center">
+<div class="container">
+<h1 class="jumbotron-heading">Your Order has Been Processed!</h1>
+</div>
+</section>
+
+<div class="container">
+<% current_customer.shopping_cart.shopping_cart_items.each do |item| %>
+<div class="row">
+<div class="col-2"></div>
+
+<div class="col-6">
+<h4><%= item.product.name %></h4>
+</div>
+
+<div class="col-2">
+<h4>$<%= item.product.price %></h4>
+</div>
+</div>
+<% end %>
+
+<div class="row">
+<div class="col-2"></div>
+
+<div class="col-6">
+<h4>Total:</h4>
+</div>
+
+<div class="col-2">
+<h4>$<%= current_customer.shopping_cart.total_price %></h4>
+</div>
+</div>
+
+<hr className="mb-12"/>
+
+<div class="row align-items-center">
+<div class="col-2"></div>
+
+<div class="col-10">
+<h3>
+Thank you and please come again!
+</h3>
+</div>
+</div>
+</div> 

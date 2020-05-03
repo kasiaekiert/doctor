@@ -29,6 +29,7 @@ const StripeCheckoutForm = () => {
     if (error) {
       console.log("[error]", error);
     } else {
+      window.location = "/checkout/complete";
       console.log("[PaymentMethod]", paymentMethod);
     }
   };

@@ -4,14 +4,14 @@ export class SiteHeader extends React.Component {
   render() {
     return (
       <header>
-        <div className='navbar navbar-dark bg-dark box-shadow'>
+        <div className='navbar navbar-dark bg-dark box-shadow navbar-expand-lg'>
           <a href='/' className='navbar-brand d-flex align-items-center'>
             <strong>Web Store</strong>
           </a>
-          <div className='collapse navbar-collapse' id='navbarNavDropdown'>
-            <ul className='navbar-nav'>
+          <div className='show collapse navbar-collapse' id='navbarNavDropdown'>
+            <ul className='navbar-nav mr-auto'>
               <li className='nav-item active'>
-                <a className='nav-link' href='#'>
+                <a className='nav-link navbar-dark bg-dark' href='#'>
                   Home <span className='sr-only'>(current)</span>
                 </a>
               </li>

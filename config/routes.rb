@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   devise_for :authors
   get 'home/index'
   root to: 'home#index'
+  get 'calendar', to: 'calendar#index'
   resources :articles
 end
