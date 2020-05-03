@@ -6,12 +6,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    products = Product.all.to_a
+    @all_products = ActiveModelSerializers::SerializableResource.new(products).as_json
   end
 
   # GET /products/1
   # GET /products/1.json
-  def show; end
+  def show
+    @product = Product.find(params[:id]).as_json(methods: :price)
+  end
 
   # GET /products/new
   def new

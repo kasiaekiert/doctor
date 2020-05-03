@@ -22,12 +22,22 @@ const myEventsList = [
 ];
 
 export const MyCalendar = (props) => {
-  console.log(props);
+  const events = props.events.map((event) => {
+    return {
+      id: event.id,
+      title: event.title,
+      start: Date.parse(event.start),
+      end: Date.parse(event.end),
+    };
+  });
+
+  console.log(events);
+
   return (
     <div>
       <Calendar
         localizer={localizer}
-        events={myEventsList}
+        events={events}
         startAccessor='start'
         endAccessor='end'
         style={{ height: "100vh" }}

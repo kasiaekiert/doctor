@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get 'calendar', to: 'calendar#index'
   resources :articles
+  resources :products, only: %i[show index]
 end

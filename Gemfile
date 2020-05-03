@@ -75,3 +75,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'mini_racer', platforms: :ruby
+
+gem "mini_magick", "~> 4.10"
+
+gem "active_model_serializers", "~> 0.10.10"
